@@ -18,15 +18,24 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+
+    protected $connection = 'rrhh';
+    protected $table = 'acceso.usuarios';
+    protected $primaryKey = 'idusuario';
+    public $timestamps = false;
+
     /**
      * The attributes that are mass assignable.
      *
      * @var string[]
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        // 'name',
+        // 'email',
+        // 'password',
+        'nombre',
+        'correo',
+        'clave',
     ];
 
     /**

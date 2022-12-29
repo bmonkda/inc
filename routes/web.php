@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// dd(User::first()->toArray());
+// dd(User::all()->toArray());
+// dd(User::all()->where('cedula',12650164)->first()->toArray());
 
 Route::get('/', function () {
     return view('welcome');
